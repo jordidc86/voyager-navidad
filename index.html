@@ -9,6 +9,21 @@
         content="Regala un vuelo en globo sobre Segovia estas Navidades. Bono regalo por 120€, sin fecha fija. Reserva ahora y vuela en 2026.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google tag (gtag.js) - Replace AW-CONVERSION_ID with your actual ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-CONVERSION_ID');
+
+        function trackPurchaseIntent() {
+            gtag('event', 'purchase_intent', {
+                'event_category': 'ecommerce',
+                'event_label': 'Christmas Voucher 120'
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -26,7 +41,8 @@
                 <div class="price-tag">Bono Regalo: 120€</div>
                 <p>El regalo inolvidable que estabas esperando. Compra ahora y reserva tu fecha más adelante por
                     whatsapp</p>
-                <a href="https://voyagerballoons.eu/shop/?add-to-cart=2127" class="btn">Comprar Ahora</a>
+                <a href="https://voyagerballoons.eu/shop/?add-to-cart=2127" class="btn"
+                    onclick="trackPurchaseIntent()">Comprar Ahora</a>
             </div>
         </section>
 
@@ -93,7 +109,8 @@
                 </div>
                 <div style="text-align: center; margin-top: 60px;">
                     <a href="https://voyagerballoons.eu/shop/?add-to-cart=2127" class="btn"
-                        style="background-color: var(--secondary); color: white;">¡Quiero reservar mi regalo!</a>
+                        style="background-color: var(--secondary); color: white;"
+                        onclick="trackPurchaseIntent()">¡Quiero reservar mi regalo!</a>
                 </div>
             </div>
         </section>
