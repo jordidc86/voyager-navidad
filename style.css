@@ -221,4 +221,35 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+
+    .sticky-mobile-cta {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        background: var(--glass);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        text-align: center;
+    }
+
+    .sticky-mobile-cta .btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    main {
+        padding-bottom: 80px;
+        /* Space for sticky button */
+    }
+}
+
+@media (min-width: 769px) {
+    .sticky-mobile-cta {
+        display: none;
+    }
 }
